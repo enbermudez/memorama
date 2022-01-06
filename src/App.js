@@ -42,8 +42,7 @@ const App = () => {
     });
 
     const anotherPieceWasRevealed = cells.some((piece) => {
-      if (piece.position !== position && piece.revealed && !piece.matched) return true;
-      return piece;
+      return piece.position !== position && piece.revealed && !piece.matched;
     });
 
     if (anotherPieceWasRevealed) {
@@ -107,6 +106,7 @@ const App = () => {
   }, [cells]);
 
   useEffect(() => {
+    console.log('Si abriste esto, bueno... Cada vez que haces click en una casilla, se revela la posición de su match. (Se cuenta desde 0).');
     setupGame();
   }, []);
 
