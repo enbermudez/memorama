@@ -1,13 +1,92 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameboard {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  outline: 1px solid #000;
+}
+
+.gameboard.disabled {
+  pointer-events: none;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition-duration: .25s;
+}
+
+.cell:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.cell.disabled {
+  cursor: default;
+}
+
+.cell.disabled:hover {
+  background: transparent;
+}
+
+.message {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: Calibri;
+}
+
+.restart {
+  border: none;
+  background: #55b3fa;
+  color: #000;
+  font-family: calibri;
+  font-size: 1.5rem;
+  padding: 10px;
+  transition-duration: .25s;
+  border-radius: 5px;
+  margin: 25px auto 0;
+  display: block;
+}
+
+.restart.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.restart:hover {
+  background: #80c8ff;
+}
+
+@media (max-width: 400px) {
+  .gameboard {
+    width: 380px;
+    height: 420px;
+  }
+
+  .message {
+    font-size: 1.5rem;
+  }
+
+  .cell {
+    font-size: 2rem;
+  }
 }
