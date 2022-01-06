@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/memorama/static/css/main.54e84b36.css",
+    "main.js": "/memorama/static/js/main.1da12b64.js",
+    "index.html": "/memorama/index.html",
+    "main.54e84b36.css.map": "/memorama/static/css/main.54e84b36.css.map",
+    "main.1da12b64.js.map": "/memorama/static/js/main.1da12b64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54e84b36.css",
+    "static/js/main.1da12b64.js"
+  ]
+}
